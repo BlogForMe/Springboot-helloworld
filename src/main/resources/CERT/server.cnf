@@ -1,0 +1,18 @@
+[ req ]
+default_bits       = 2048
+prompt             = no
+default_md         = sha256
+distinguished_name = dn
+req_extensions     = req_ext
+
+[ dn ]
+C  = US
+ST = State
+L  = City
+O  = Organization
+OU = OrgUnit
+CN = 192.168.43.167  # Replace with your server's IP address
+
+[ req_ext ]
+subjectAltName = IP:192.168.43.167  # Ensure this matches your server IP
+
