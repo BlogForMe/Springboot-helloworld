@@ -9,7 +9,7 @@ req_extensions     = req_ext
 C  = US
 ST = State
 L  = City
-O  = MyOrganization
+O  = MyOrg
 OU = MyUnit
 CN = realmjon.mynetgear.com
 
@@ -18,4 +18,6 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = realmjon.mynetgear.com
+DNS.2 = www.realmjon.mynetgear.com
+DNS.3 = api.realmjon.mynetgear.com
 
