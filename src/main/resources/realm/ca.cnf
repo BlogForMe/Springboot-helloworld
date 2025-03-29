@@ -1,0 +1,27 @@
+[ req ]
+default_bits       = 4096
+prompt             = no
+default_md         = sha256
+distinguished_name = dn
+x509_extensions    = v3_ca
+
+[ dn ]
+C  = US
+ST = State
+L  = City
+O  = MyOrg
+OU = MyUnit
+CN = MyLocalCA
+
+[ v3_ca ]
+# Add Subject Alternative Names to the CA certificate
+subjectAltName = @alt_names
+# Indicate this certificate is a CA
+basicConstraints = critical, CA:TRUE, pathlen:0
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
+subjectKeyIdentifier = hash
+
+[ alt_names ]
+DNS.1 = myca.realmjon.mynetgear.com
+DNS.2 = realmjon.mynetgear.com
+

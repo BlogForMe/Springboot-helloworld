@@ -1,11 +1,11 @@
-[req]
+[ req ]
 default_bits       = 2048
 prompt             = no
 default_md         = sha256
 distinguished_name = dn
 req_extensions     = req_ext
 
-[dn]
+[ dn ]
 C  = US
 ST = State
 L  = City
@@ -13,10 +13,11 @@ O  = MyOrg
 OU = MyUnit
 CN = realmjon.mynetgear.com
 
-[req_ext]
+[ req_ext ]
+# Add Subject Alternative Names for the server certificate
 subjectAltName = @alt_names
 
-[alt_names]
+[ alt_names ]
 DNS.1 = realmjon.mynetgear.com
 DNS.2 = www.realmjon.mynetgear.com
 DNS.3 = api.realmjon.mynetgear.com
